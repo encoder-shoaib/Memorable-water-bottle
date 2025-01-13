@@ -1,11 +1,12 @@
 import './Bottol.css'
-const Bottol = ({bottle}) => {
+const Bottol = ({bottle ,handleAddToCart}) => {
     const {name , price,img} = bottle;
     return (
         <div className='bottle'>
-            <img src={img} alt="" />
             <p>Name : {name}</p>
+            <img src={img} alt="" />
             <p>price : {price}$</p>
+            <button onClick={()=>handleAddToCart(bottle)}>Purchase</button>
         </div>
     );
 };
